@@ -1,0 +1,35 @@
+.register{
+    margin-right:10px;
+}
+.cart{
+    margin-right: 25px;
+    font-weight: bold;
+}
+.badge {
+    padding-left: 9px;
+    padding-right: 9px;
+    -webkit-border-radius: 9px;
+    -moz-border-radius: 9px;
+    border-radius: 9px;
+}
+  
+  .label-warning[href],
+  .badge-warning[href] {
+    background-color: #c67605;
+  }
+  #lblCartCount {
+      font-size: 12px;
+      background: #ff0000;
+      color: #fff;
+      padding: 0 5px;
+      vertical-align: top;
+      margin-left: -10px; 
+  }
+.username{
+    margin-top: 10px;
+    margin-right: 15px;
+}
+.fa-user{
+    font-size: 20px;
+    margin-right: 5px;
+}

@@ -1,0 +1,49 @@
+<div class="container">
+  <div class="row mb-20">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-body">
+          <div class="card-header">
+            <h1 class="title">Cart</h1>
+          </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Quantity</th>
+                <th scope="col">Total</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let product of cartProducts">
+                <th>
+                  <div class="row">
+                    <div class="col-3">
+                      <img src="{{product.product.image}}" class="card-img-top" 
+                    alt="{{product.title}}" class="center">
+                    </div>
+                    <div class="col-3 description">
+                      {{product.product.title}}
+                    <p [style.color]="product.quantity > 0 ? 'green' : 'red'">In Store</p>
+                    </div>
+                  </div>
+                </th>
+                <th>{{product.product.price}} :-</th>
+                <th><button class="btn btn-md"><i class="fa fa-minus-circle" (click)="substract(product.cartProductId)"></i></button><span class="quantity">{{product.quantity}}</span><button class="btn btn-md" (click)="add(product.product.productId)"><i class="fa fa-plus-circle"></i></button></th>
+                <th>{{((product.product.price) * product.quantity)| number : '.'}} kr
+                  <button type="button" class="btn btn-lg" (click)="removeProduct(product.product.productId)"><i class="fa fa-trash remove-btn"></i></button>
+                </th>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <div class="col-md-5 float-right">
+        <p>Shipping Cost 0:-</p>
+        <h1 class="pay">To Pay: {{cartSum}} SEK</h1>
+        <button class="btn btn-lg btn-success float-right" (click)="placeOrder()">Place Order</button>
+      </div>
+    </div>
+  </div>
+</div>

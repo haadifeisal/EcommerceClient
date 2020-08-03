@@ -1,0 +1,20 @@
+
+<div *ngIf="products?.length > 0; then showProducts; else noProducts"></div>
+<ng-template #showProducts>
+    <div class="row">
+        <div class="card myDiv" style="width: 230px;" *ngFor="let product of products">
+                    <img src="{{product.image}}" class="card-img-top" 
+                    alt="{{product.title}}" style="height:170px; width:160px;" class="center">
+                    <div class="body">
+                        <p class="card-text">{{product.title}}</p>
+                        <hr class="line">
+                        <p class="card-text price">{{product.price}} SEK</p>
+                        <button class="btn btn-sm btn-success" [disabled]="!authService.loggedIn()" (click)="addToCart(product.productId)"><i class="fa fa-cart-plus" style="margin-right:5px; font-size:15px"></i>Buy</button>
+                        <a href="#" class="btn btn-sm btn-info b2" [routerLink]="['/product/'+product.productId]"><i class="fa fa-eye" style="margin-right:5px; font-size:15px"></i>View</a>
+                    </div>
+            </div>
+    </div>
+</ng-template>
+<ng-template #noProducts>
+    <h1 class="display-4" style="color:red">No products in this category</h1>
+</ng-template>
