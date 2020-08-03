@@ -1,3 +1,7 @@
+#
+login username: malik-geechi
+login password: malik-geechi
+
 # EcommerceClient
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.18.
