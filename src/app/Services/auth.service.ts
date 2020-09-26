@@ -10,7 +10,7 @@ import { User } from '../Models/User';
 })
 export class AuthService {
 
-  url = `http://localhost:54640/v1/Auth/`;
+  url = `http://localhost:8081/v1/Auth/`;
   token: string;
   decodedToken: any;
   username: string;

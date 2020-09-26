@@ -10,7 +10,7 @@ import { CartProduct } from '../Models/CartProduct';
 })
 export class CartService {
 
-  url = `http://localhost:54640/v1/Cart`;
+  url = `http://localhost:8081/v1/Cart`;
   cartCount : number;
 
   constructor(

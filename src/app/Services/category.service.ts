@@ -9,7 +9,7 @@ import { Category } from '../Models/Category';
 })
 export class CategoryService {
 
-  url = `http://localhost:54640/v1/Category/`;
+  url = `http://localhost:8081/v1/Category/`;
   
   constructor(private http: HttpClient) { }
 
